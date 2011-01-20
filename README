@@ -1,0 +1,22 @@
+hip_rss is a very simple *Ruby based RSS/Atom reader. It can grab feeds from multiple sources, determine if any new updates are available and post a description and link to the HipChat room of your choice.
+
+There are three components to hip_rss: the script itself, the configuration file (hip_rss.yaml) and, an info file into which information about the last update for each feed are written.
+
+A sample configuration file is included, which should be self-explanatory, but in case it isn't:
+
+- info_file: A full path to the information file. Needs to be writable.
+- feed_defs: A list of feeds to parse. Each feed includes:
+	- id: An unique identifier for this feed which can be whatever you like.
+	- feed: The URL of the feed.
+	- key: The HipChat key to use for this feed.
+	- room: The name of the HipChat room to post feed updates.
+	- user: A user name under which feed updates will appear.
+
+
+hip_rss.rb expects to find the configuration file at "/home/hip_rss/hip_rss.yaml". Feel free to change this to suit your needs. The line you'll want to change is:
+
+config = YAML.load_file('/home/hip_rss/hip_rss.yaml')
+
+I believe that's it. If you have any questions, you can find me on Twitter as @somegeekintn
+
+* Please note that my Ruby knowledge is extremely limited. I spent less than a day learning enough to make this script, so it is very likely to contain examples of how not to do things in Ruby. You've been warned.
