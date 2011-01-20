@@ -1,0 +1,13 @@
+---
+info_file: "/home/hip_rss/feed_info.yaml"
+feed_defs:
+  - id: feed_1
+    feed: 'http://www.feedsite1.com/feed'
+    key: 'hipchatapikey'
+    room: 'Feed Room 1'
+    user: 'Feed 1'
+  - id: feed_2
+    feed: 'http://www.feedsite2.com/feed'
+    key: 'hipchatapikey'
+    room: 'Feed Room 2'
+    user: 'Feed 2'
